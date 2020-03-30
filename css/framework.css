@@ -1,0 +1,23 @@
+.list-unstyled{
+  list-style: none;
+}
+
+.container{
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.clearboth{
+  clear: both;
+}
+
+.visible-sm,
+.visible-xs{
+  display: none;
+}
