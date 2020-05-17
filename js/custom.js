@@ -7,22 +7,24 @@ $(function(){
       $(".header").css("box-shadow","none");
     }
   })
-/* Carsoul */
-$(".container .slider .btn .next").on("click",function(){
 
-if(!$(".carsoul .active").is(":last-of-type")){
-    $(".carsoul .active").removeClass("active").next().addClass("active");
-}
 
-});
 
-$(".container .slider .btn .prev").on("click",function(){
-
-if(!$(".carsoul .active").is(":first-of-type")){
-    $(".carsoul .active").removeClass("active").prev().addClass("active");
-}
-
-});
+// $(".container .slider .btn .next").on("click",function(){
+//
+// if(!$(".carsoul .active").is(":last-of-type")){
+//     $(".carsoul .active").removeClass("active").next().addClass("active");
+// }
+//
+// });
+//
+// $(".container .slider .btn .prev").on("click",function(){
+//
+// if(!$(".carsoul .active").is(":first-of-type")){
+//     $(".carsoul .active").removeClass("active").prev().addClass("active");
+// }
+//
+// });
 
 var height = $(".Seriousness .left").innerHeight();
 $(".Seriousness .right").height(height);
@@ -161,3 +163,62 @@ if(e.keyCode == 13 && $(".input_type").val() != "")
 
 
 });
+
+
+
+
+
+/* Carsoul */
+var currentImge    = Array.from(document.querySelectorAll(".slider .item")),
+    currentCaption = Array.from(document.querySelectorAll(".slider .item .caption")),
+    currentSlider  = 0,
+    nextButton     = document.getElementById("next"),
+    prevButton     = document.getElementById("prev");
+
+/* Remove Active Class */
+let removeAllActive = () =>{
+  currentImge.forEach(item => {
+    item.classList.remove("active");
+  });
+  currentCaption.forEach(item => {
+    item.classList.remove("active");
+  });
+}
+
+/* Add Active Class */
+let addActive = () =>{
+  removeAllActive();
+  currentImge[currentSlider].classList.add("active");
+  currentCaption[currentSlider].classList.add("active");
+}
+
+/* If Current Slider Is The last, Then Restart carsoul */
+let add = ()=>{
+   currentSlider = 0;
+  addActive();
+
+}
+    /* If Current Slider Is The First, Then Restart carsoul from last to first */
+let remove = ()=>{
+   currentSlider = currentImge.length-1;
+  addActive();
+
+}
+
+
+addActive();
+/* Click to go to next slide */
+nextButton.onclick = ()=>{
+  console.log("hello");
+currentSlider == currentImge.length-1 ?  add(): currentSlider++; addActive();
+}
+/* Click to go to previous slide */
+prevButton.onclick = ()=>{
+currentSlider == 0 ?  remove(): currentSlider--; addActive();
+}
+/*end*/
+var information = document.getElementById("io");
+information.onclick = function(){
+  console.log(window.pageYOffset==(1104));
+        window.pageYOffset=(1104)
+}

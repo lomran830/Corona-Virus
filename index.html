@@ -5,6 +5,7 @@
     <title>CoronaVirus</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/all.css">
+        <link rel="stylesheet" href="swiper-master/package/css/swiper.min.css">
     <script src="fonts/all.js"></script>
     <script src="js/jquery-3.4.0.min.js"></script>
   </head>
@@ -18,8 +19,8 @@
     </div>
     <div class="menu-navbar">
       <ul class="list-unstyled">
-        <li class="active"><a href="#">Home <i class="fas fa-mouse-pointer"></i></a></li>
-        <li><a href="#info">Information</a></li>
+        <li class="active"><a href="index.html">Home <i class="fas fa-mouse-pointer"></i></a></li>
+        <li id="io"><a href="#info">Information</a></li>
         <li><a href="#abu">About</a></li>
         <li><a href="#ad">Advices</a></li>
         <li><a href="log.html">LogIn</a></li>
@@ -30,28 +31,66 @@
 
 <!--Carsoul -->
 <div class="container">
-<div class="slider">
+    <div class="slider">
+        <div class="overlay"></div>
+        <div class="carsoul">
 
-  <div class="carsoul">
-    <section class="caption">
-    <h2>Stay at home</h2>
-    <button>LEARN MORE</button>
-  <a href="log.html">  <button>LogIn</button></a>
-  </section>
-    <section class="overlay"></section>
-    <div class="item active"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-
-  </div>
-  <div class="btn">
-    <button class="prev"><i class="fas fa-arrow-alt-circle-left"></i></button>
-    <button class="next"><i class="fas fa-arrow-alt-circle-right"></i></button>
-  </div>
-</div>
+          <div class="sliders">
+            <div class="item active">
+              <img src="imgs/2.jpeg">
+              <div class="caption active">
+              <h2>Stay at home</h2>
+              <button>LEARN MORE</button>
+              <a href="log.html">  <button>LogIn</button></a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="imgs/6.jpeg">
+              <div class="caption">
+              <h2>Stay at home</h2>
+              <button>LEARN MORE</button>
+              <a href="log.html">  <button>LogIn</button></a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="imgs/3.jpeg">
+              <div class="caption">
+              <h2>Stay at home</h2>
+              <button>LEARN MORE</button>
+              <a href="log.html">  <button>LogIn</button></a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="imgs/7.jpeg">
+              <div class="caption">
+              <h2>Stay at home</h2>
+              <button>LEARN MORE</button>
+              <a href="log.html">  <button>LogIn</button></a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="imgs/1.jpeg">
+              <div class="caption">
+              <h2>Stay at home</h2>
+              <button>LEARN MORE</button>
+              <a href="log.html">  <button>LogIn</button></a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="imgs/4.jpeg">
+              <div class="caption">
+              <h2>Stay at home</h2>
+              <button>LEARN MORE</button>
+              <a href="log.html">  <button>LogIn</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="btn">
+        <button class="prev" id="prev"><i class="fas fa-arrow-alt-circle-left"></i></button>
+        <button class="next" id="next"><i class="fas fa-arrow-alt-circle-right"></i></button>
+      </div>
+    </div>
 </div>
 
 
@@ -60,15 +99,25 @@
 <div class="about" id="abu">
   <div class="container">
     <div class="left">
-      <img src="imgs/8.jpeg">
+    <div class="img hidden-xs">
+          <img src="imgs/8.jpg">
+          <div class="overlay"></div>
     </div>
-<!-- <Div class="clearboth"></div> -->
+    </div>
     <div class="right">
       <h2 class="h1">About</h2>
       <p>The virus is not "new" (used to infect animals), but it is new for humans after it can transmit between different types of organisms.It is not yet known exactly how the Coruna virus spreads from person to person, but similar viruses spread through droplets, such as those produced when a person coughs or sneezes. World health organizations say regular and thorough hand washing is crucial in controlling to avoid infection.</p>
+      <div class="right-part1 hidden-md">
+        <p> Corona virus can, in severe infections, cause pneumonia, severe acute respiratory syndrome, insufficiency of functions of a number of body parts and even death.</p>
+        <a href="#">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="right-part2 visible-md">
       <p> Corona virus can, in severe infections, cause pneumonia, severe acute respiratory syndrome, insufficiency of functions of a number of body parts and even death.</p>
       <a href="#">Learn more <i class="fas fa-arrow-right"></i></a>
     </div>
+
+
     <div class="clearboth"></div>
   </div>
 </div>
@@ -78,11 +127,41 @@
 <div class="article text-center" id="info">
   <div class="container">
     <h2>CoronaVirus</h2>
-    <p>Egypt records four new deaths due to the Corona virus, and more infections, and Saudi Arabia imposes a partial curfew in the country, and Damascus records the first confirmed infection with the virus, and the UAE suspends all flights.
-Scientists confirm that the SK virus needs an average of five days to show symptoms that start with a fever, followed by a dry cough, and after about a week, the person feels short of breath, which requires hospitalization.
-    </p>
+    <p>Egypt records twenty new deaths due to the Corona virus, and more infections, and Saudi Arabia imposes a partial curfew in the country, and Damascus records more confirmed infection with the virus, and the UAE suspends all flights. Scientists confirm that the covid-19 virus needs an average of five days to show symptoms that start with a fever, followed by a dry cough, and after about a week, the person feels short of breath, which requires hospitalization.</p>
     <button> Learn More</button>
   </div>
+</div>
+<!-- Rate -->
+
+<div class="rate">
+  <div class="container">
+          <h2 class="text-center title">Rates !!</h2>
+    <div class="parts">
+      <i class="fas fa-users"></i>
+      <span class="num">294,110	</span>
+      <div class="clearboth"></div>
+            <h2>Confirmed cases</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis blandit turpis et commodo.</p>
+    </div>
+    <div class="parts par">
+      <i class="fas fa-users"></i>
+            <span class="num">	14,647</span>
+      <div class="clearboth"></div>
+            <h2>Total deaths</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis blandit turpis et commodo.</p>
+    </div>
+    <div class="parts par">
+      <i class="fas fa-users"></i>
+      <span class="num">187</span>
+      <div class="clearboth"></div>
+      <h2>Countries with cases</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis blandit turpis et commodo.</p>
+    </div>
+    <div class="clearboth"></div>
+  </div>
+
 </div>
 <!-- Seriousness of the virus  -->
 
@@ -103,43 +182,12 @@ Scientists confirm that the SK virus needs an average of five days to show sympt
   </div>
 
   <div class="right">
-    <img src="imgs/map.png">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rAj38E7vrS8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="clearboth"></div>
 </div>
 
-<!-- Rate -->
 
-<div class="rate">
-  <div class="container">
-          <h2 class="text-center title">Rates !!</h2>
-    <div class="parts">
-      <i class="fas fa-users"></i>
-      <span>294,110	</span>
-      <div class="clearboth"></div>
-            <h2>Confirmed cases</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis blandit turpis et commodo.</p>
-    </div>
-    <div class="parts par">
-      <i class="fas fa-users"></i>
-            <span>	14,647</span>
-      <div class="clearboth"></div>
-            <h2>Total deaths</h2>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis blandit turpis et commodo.</p>
-    </div>
-    <div class="parts par">
-      <i class="fas fa-users"></i>
-      <span>187</span>
-      <div class="clearboth"></div>
-      <h2>Countries with cases</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis blandit turpis et commodo.</p>
-    </div>
-    <div class="clearboth"></div>
-  </div>
-
-</div>
 
 <!-- Advices -->
 
@@ -195,7 +243,6 @@ Many people in China deal closely with virus-carrying animals, which are easily 
 </div>
 
 <!-- gallery -->
-
 <div class="gallery text-center">
   <div class="container">
     <h2>gallery</h2>
@@ -293,9 +340,9 @@ Donec eget turpis sit amet erat mollis bibendum a quis augue. Integer commodo, o
       <div class="row social">
         <h3>Social Media</h3>
         <ul class="list-unstyled">
-          <a href="#"><li><i class="fab fa-facebook-square"></i></li></a>
-        <a><li><i class="fab fa-instagram-square"></i></li></a>
-          <a href="#"><li><i class="fab fa-twitter-square"></i></li></a>
+          <a href="https://www.facebook.com/lolo.omran.338"><li><i class="fab fa-facebook-square"></i></li></a>
+        <a href="https://www.instagram.com/lolo.omran.338/"><li><i class="fab fa-instagram-square"></i></li></a>
+          <a href="https://twitter.com/Loloomran8"><li><i class="fab fa-twitter-square"></i></li></a>
       <a href="#"><li style="display:block"><i class="fab fa-google"></i></li></a>
         </ul>
       </div>
@@ -348,8 +395,14 @@ Donec eget turpis sit amet erat mollis bibendum a quis augue. Integer commodo, o
         placeholder="Type . .  .">
 </div>
 </div>
-
-
+<!--plugin-->
+<script src="swiper-master/package/js/swiper.min.js"></script>
+<script type="text/javascript" src="imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="Counter-Up-master/jquery.counterup.min.js"></script>
   <script src="js/custom.js"></script>
+  <script>
+	$(".num").counterUp({delay:10, time:2000});
+
+  </script>
   </body>
 </html>

@@ -14,16 +14,9 @@
 
   .about{
     text-align: center;
-      top: 163px !important;
+      /* top: 163px !important; */
   }
-  .about .left{
-    width: 100% !important;
-  margin-bottom: 18px;
-  }
-  .about .left img{
-    width: 100% !important;
-          max-height: 682px;
-  }
+
   .about .right {
     width:100% !important;
   }
@@ -71,11 +64,14 @@
     font-size: 14px !important;
     padding: 5px !important;
   }
-
+.Seriousness{
+  height: auto !important;
+}
   .Seriousness .left{
     width: 100% !important;
   }
   .Seriousness .right{
+    /* height: auto !important; */
     width: 100% !important;
   }
   .advices {
@@ -174,12 +170,9 @@ margin-right: 8px !important;
           right: 28px !important;
       width: 23% !important
     }
-    .about .left{
-      width: 41% !important;
-    }
-    .about .left img{
-      width:100%;
-
+    .about .right{
+      width: 100% !important;
+    margin-bottom: 18px;
     }
     .rate .parts span{
           font-size: 24px !important;
@@ -253,12 +246,13 @@ float: none !important;
 
 @media(min-width:992px){ /* Small Labtop */
   @media(max-width:1199px){
+    .hidden-md{
+      display: none;
+    }
     .container{
       width: 970px;
     }
-    .about .right {
-    width: 37% !important;
-    }
+
     .advices .left li a{
           font-size: 12px !important;
     }
@@ -275,4 +269,10 @@ font-size: 8px !important;
   .container{
     width: 1170px;
   }
+}
+
+@media(min-width:768px){
+.Seriousness .right{
+      height: 100% !important;
+}
 }

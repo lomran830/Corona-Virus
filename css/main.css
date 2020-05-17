@@ -59,123 +59,127 @@ body {
           left: 27px; }
 
 /* Carsoul */
-.container {
-  position: relative; }
-  .container .slider {
-    margin-top: 115px; }
-    .container .slider .carsoul {
-      position: relative; }
-      .container .slider .carsoul .caption {
-        z-index: 9;
+.container .slider {
+  margin-top: 115px;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden; }
+  .container .slider .overlay {
+    z-index: 9;
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .6; }
+  .container .slider .carsoul {
+    height: 100%;
+    position: relative; }
+    .container .slider .carsoul .sliders {
+      height: 100%; }
+      .container .slider .carsoul .sliders .item {
+        width: 100%;
+        opacity: 0;
+        height: 100%;
         position: absolute;
-        margin: auto;
-        text-align: center;
-        top: 82px;
-        padding-left: 47px; }
-        .container .slider .carsoul .caption h2 {
-          color: #fff;
-          font-family: monospace;
-          font-size: 5em;
-          letter-spacing: 4px; }
-        .container .slider .carsoul .caption button {
-          outline: 0;
-          letter-spacing: 4px;
-          font-size: 14px;
-          background: #ACEEF3;
-          border: 1px solid #ACEEF3;
-          padding: 9px 19px;
-          border-radius: 4px;
-          margin: 4px;
-          font-weight: 700;
-          font-family: monospace;
-          cursor: pointer;
-          transition: all .5s ease-in-out; }
-          .container .slider .carsoul .caption button:hover {
-            background: transparent;
-            color: #ACEEF3; }
-      .container .slider .carsoul .overlay {
-        background: #000;
+        top: 0;
+        transition: opacity .3s ease-in-out; }
+        .container .slider .carsoul .sliders .item.active {
+          opacity: 1; }
+        .container .slider .carsoul .sliders .item .caption {
+          z-index: 9;
+          position: absolute;
+          top: -14%;
+          margin: auto;
+          text-align: center;
+          padding-left: 47px;
+          opacity: 0;
+          transition: opacity .5s ease-in-out;
+          transition: top .5s ease-in-out; }
+          .container .slider .carsoul .sliders .item .caption h2 {
+            color: #fff;
+            font-family: monospace;
+            font-size: 5em;
+            letter-spacing: 4px; }
+          .container .slider .carsoul .sliders .item .caption button {
+            outline: 0;
+            letter-spacing: 4px;
+            font-size: 14px;
+            background: #ACEEF3;
+            border: 1px solid #ACEEF3;
+            padding: 9px 19px;
+            border-radius: 4px;
+            margin: 4px;
+            font-weight: 700;
+            font-family: monospace;
+            cursor: pointer;
+            transition: all .5s ease-in-out; }
+            .container .slider .carsoul .sliders .item .caption button:hover {
+              background: transparent;
+              color: #ACEEF3; }
+          .container .slider .carsoul .sliders .item .caption.active {
+            position: absolute;
+            top: 24%;
+            opacity: 1; }
+        .container .slider .carsoul .sliders .item img {
+          width: 100%;
+          height: 100%; }
+  .container .slider .btn {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 10; }
+    .container .slider .btn button {
+      outline: 0;
+      border: 1px solid transparent;
+      background: transparent;
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff; }
+      .container .slider .btn button svg {
+        font-size: 36px;
+        color: #52c6ce;
+        z-index: 9; }
+    .container .slider .btn .next {
+      position: absolute;
+      right: 0;
+      float: right; }
+    .container .slider .btn .prev {
+      padding: 0px 10px;
+      position: relative;
+      top: 18px; }
+
+/* About */
+.about {
+  position: relative; }
+  .about .left {
+    width: 50%;
+    float: left;
+    max-height: 682px; }
+    .about .left .img {
+      position: relative;
+      margin-top: 92px; }
+      .about .left .img img {
+        width: 100%;
+        height: 100%; }
+      .about .left .img .overlay {
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        opacity: .6;
-        display: block; }
-      .container .slider .carsoul div {
-        display: none; }
-      .container .slider .carsoul .active {
-        display: block; }
-      .container .slider .carsoul .item:first-of-type {
-        background-image: url("../imgs/2.jpeg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 600px; }
-      .container .slider .carsoul .item:nth-of-type(2) {
-        background-image: url("../imgs/6.jpeg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 600px; }
-      .container .slider .carsoul .item:nth-of-type(3) {
-        background-image: url("../imgs/3.jpeg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 600px; }
-      .container .slider .carsoul .item:nth-of-type(4) {
-        background-image: url("../imgs/7.jpeg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 600px; }
-      .container .slider .carsoul .item:nth-of-type(5) {
-        background-image: url("../imgs/1.jpeg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 600px; }
-      .container .slider .carsoul .item:nth-of-type(6) {
-        background-image: url("../imgs/4.jpeg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 600px; }
-    .container .slider .btn {
-      position: relative;
-      margin-top: -28%; }
-      .container .slider .btn button {
-        outline: 0;
-        border: 1px solid transparent;
-        background: transparent;
-        font-size: 32px;
-        font-weight: bold;
-        cursor: pointer;
-        color: #fff; }
-        .container .slider .btn button svg {
-          font-size: 36px;
-          color: #52c6ce;
-          z-index: 9; }
-      .container .slider .btn .next {
-        position: absolute;
-        right: 0; }
-      .container .slider .btn .prev {
-        padding: 0px 10px;
-        position: relative;
-        top: 18px; }
-
-/* About */
-.about {
-  position: relative;
-  top: 365px; }
-  .about .left {
-    width: 50%;
-    float: left;
-    max-height: 682px; }
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: all .3s ease-in-out; }
+      .about .left .img:hover .overlay {
+        background-color: rgba(0, 0, 0, 0.2); }
   .about .right {
-    width: 50%;
-    float: right; }
+    width: 48%;
+    float: right;
+    margin-left: 2%;
+    margin-top: 29px; }
     .about .right .h1 {
       color: #333;
       font-family: monospace;
@@ -192,6 +196,23 @@ body {
       font-family: monospace;
       letter-spacing: 1.5px;
       font-size: 16px; }
+  .about .right-part2 {
+    display: none; }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about .right-part2 {
+    display: block !important; } }
+
+    .about .right-part2 p {
+      color: #4d4c4c;
+      font-family: sans-serif;
+      font-size: 18px;
+      line-height: 1.7; }
+    .about .right-part2 a {
+      text-decoration: none;
+      color: #146d74;
+      font-family: monospace;
+      letter-spacing: 1.5px;
+      font-size: 16px; }
 
 /* article */
 .article {
@@ -201,7 +222,7 @@ body {
   padding-top: 55px;
   padding-bottom: 55px;
   position: relative;
-  top: 484px; }
+  top: 59px; }
   .article h2 {
     font-family: monospace;
     letter-spacing: 1.6px;
@@ -226,8 +247,9 @@ body {
 /*Seriousness of the virus*/
 .Seriousness {
   position: relative;
-  top: 569px;
-  background: #cccccc54; }
+  top: 196px;
+  background: #cccccc54;
+  height: 528.58px; }
   .Seriousness .left {
     width: 50%;
     float: left;
@@ -249,14 +271,14 @@ body {
   .Seriousness .right {
     width: 50%;
     float: right; }
-    .Seriousness .right img {
+    .Seriousness .right iframe {
       width: 100%;
       height: 100%; }
 
 /* Rate */
 .rate {
   position: relative;
-  top: 649px;
+  top: 115px;
   padding-bottom: 48px; }
   .rate h2.title {
     position: relative;
@@ -308,7 +330,7 @@ body {
 
 /* Advices */
 .advices {
-  margin-top: 678px; }
+  margin-top: 250px; }
   .advices h2 {
     position: relative;
     font-family: monospace;
@@ -337,7 +359,7 @@ body {
       cursor: pointer;
       margin-bottom: 20px;
       background: #51a5ac;
-      border-radius: 10px;
+      border-radius: 3px;
       padding: 5px;
       margin-right: 95px; }
       .advices .left li:last-of-type a {
@@ -350,7 +372,7 @@ body {
         font-size: 18px;
         line-height: 2; }
       .advices .left li.active {
-        box-shadow: 1px 1px 4px 4px #51a5ac4d;
+        box-shadow: 1px 1px 8px #ccc;
         transform: scale3d(1.1, 1.1, 1.2); }
   .advices .right {
     padding-bottom: 30px;
@@ -548,7 +570,7 @@ body {
     color: #0e7178; }
 
 .chat {
-  z-index: 9;
+  z-index: 13;
   cursor: pointer;
   font-size: 31px;
   position: fixed;
@@ -691,5 +713,10 @@ body {
   .log .right img {
     width: 50%;
     float: left; }
+
+/*compoents*/
+@media (max-width: 991px) {
+  .hidden-xs {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
