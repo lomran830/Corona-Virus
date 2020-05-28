@@ -35,7 +35,6 @@ background: #fff;
   cursor: pointer;
   float: $flaotLeft;
   h2{
-
   font:{
     family: monospace;
     size:29px
@@ -46,8 +45,8 @@ background: #fff;
 .menu-navbar{
   padding-right: 27px;
   border-radius: 10px;
-  border: 1px solid #ACEEF3;
-  background: #ACEEF3;
+  border: 1px solid #7AA6A6;
+  background: #63b2b2;
   text-align: center;
   margin-top: 20px;
   float: $floatRight;
@@ -55,9 +54,11 @@ background: #fff;
     li{
 
       display: inline-block;
+      position: relative;
+
       a{
         text-decoration: none;
-        color: #333;
+        color: #ffffffe3;
         font-family: monospace;
         font-size: 18px;
         padding: 10px;
@@ -67,10 +68,13 @@ background: #fff;
         a{
       font-weight: bold;
       font-style: italic;
+      color: #fff;
       svg{
-      position: absolute;
-      top: 11px;
-      left: 27px;
+        position: absolute;
+        /* top: 11px; */
+        left: 27px;
+        color: #3d6363;
+        bottom: -9px;
       }
         }
       }
@@ -146,8 +150,8 @@ background: #fff;
                     outline: 0;
                   letter-spacing: 4px;
                   font-size: 14px;
-                  background: #ACEEF3;
-                  border: 1px solid #ACEEF3;
+                  background: #63b2b2;
+                  border: 1px solid #63b2b2;
                   padding: 9px 19px;
                   border-radius: 4px;
                   margin: 4px;
@@ -166,8 +170,6 @@ background: #fff;
                     opacity: 1;
                   }
                 }
-
-
           img{
             width: 100%;
             height: 100%;
@@ -234,7 +236,7 @@ background: #fff;
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(0,0,0,.7);
+        background-color: rgba(0,0,0,.5);
         transition: all .3s ease-in-out;
       }
       &:hover{
@@ -319,15 +321,15 @@ background: #fff;
     }
     button{
       outline: 0;
-      background: #ACEEF3;
-      border: 1px solid #ACEEF3;
+      background: #63b2b2;
+      border: 1px solid #63b2b2;
       padding: 9px 37px;
       font-size: 17px;
       font-family: monospace;
       cursor: pointer;
       transition: box-shadow .5s ease-in-out;
       &:hover{
-        box-shadow: 1px 1px 4px 4px #9be9ef;
+        box-shadow: 1px 1px 8px #32777799;
       }
     }
 
@@ -483,10 +485,11 @@ h2{
         li{
           cursor: pointer;
               margin-bottom: 20px;
-              background: #51a5ac;
+              background: #63b2b2;
               border-radius: 3px;
               padding: 5px;
               margin-right: 95px;
+              text-align: center;
               &:last-of-type{
                 a{
                           font-size: 13px
@@ -723,8 +726,9 @@ float: left;
       line-height: 2;
       letter-spacing: 2px;
 svg {
-    color: #4ad1db;
+    color: #63b2b2;
     margin-right: 10px;
+    cursor: pointer;
 }
     }
   }
@@ -875,19 +879,29 @@ input.input_type{
 
       margin-top: 27px;
       padding-bottom: 55px;
+      @media(max-width:992px){
+        width: 100% !important;
+      }
       h3{
         color: #333;
         font-family: monospace;
         font-size: 28px;
         padding-left: 36px;
+        @media(max-width:992px){
+          padding-left: 0 !important;
+        }
       }
       form{
         padding-left: 36px;
+        @media(max-width:992px){
+          padding-left: 0 !important;
+        }
       }
       .email-suggest,.email-suggest1{
+        margin-bottom: 20px;
         width: 45%;
       outline: 0;
-      border-radius: 9px;
+      border-radius: 4px;
       border: 1px solid #f1f1f1;
       padding: 12px 63px 12px 12px;
       color: #333;
@@ -899,6 +913,13 @@ input.input_type{
       }
 
       }
+      p{
+        margin-left: 36px;
+        font-family: sans-serif;
+        font-size: 15px;
+        text-align: left;
+        color: #333333eb;
+      }
       a{
         text-decoration: none;
         color: #333;
@@ -906,7 +927,7 @@ input.input_type{
         text-align: center;
         cursor: pointer;
         padding: 12px 63px 12px 12px;
-        background: #ACEEF3;
+        background: #63b2b2;
       }
 button{
 
@@ -952,6 +973,294 @@ img{
   float: left;
 }
     }
+}
+
+
+/****about page*/
+
+/*information*/
+.infomation{
+  background-image: url("https://fox2now.com/wp-content/uploads/sites/14/2020/03/CHIP-Coronavirus-COVID-19.png?w=1280&h=720&crop=1");
+  @include prefixes(background-size,cover,webkit ms moz o);
+  @include prefixes(background-position,center center,webkit ms moz o);
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  @media(max-width: 992px){
+    height: 478px !important;
+    margin-top: 83px;
+  }
+}
+.infomation:after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-image: url(../imgs/wave.png);
+  width: 100%;
+  height: 186px;
+}
+
+/** page **/
+.page{
+  ul{
+    li{
+      display: inline-block;
+      font-family: sans-serif;
+      font-size: 17px;
+      &.active{
+        cursor: pointer;
+        a{
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+
+        }
+        &::after{
+          content: "/";
+        }
+      }
+    }
+  }
+}
+
+/**about*/
+.video{
+  width: 70%;
+  position: fixed;
+  top: 19px;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  left: 215px;
+  @media(max-width:768px){
+    left: 0 !important;
+    width:100% !important;
+    top: 0 !important;
+  }
+  div{
+    position: relative;
+    top: 53px;
+    left: 50%;
+    z-index: 9;
+    color: #fff;
+    cursor: pointer;
+    img{
+      width: 25px;
+      height: 25px;
+    }
+  }
+  iframe{
+    height: 91vh;
+    width: 100%;
+
+    position: relative;
+    // left: 4%;
+
+  }
+}
+.main
+{
+  margin-top: 74px;
+  margin-bottom: 64px;
+  .left{
+    width: 40%;
+    float: $flaotLeft;
+    @media(max-width:992px){
+      width: 100% !important;
+    }
+.img{
+  position: relative;
+  .covid{
+    width: 100%;
+    height: 100%;
+
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+  }
+  .play{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 41%;
+    top: 38%;
+    z-index: 9;
+    cursor: pointer;
+  }
+}
+  }
+  .right{
+    width: 60%;
+    float: $flaotLeft;
+    @media(max-width:992px){
+      width: 100% !important;
+    }
+    p{
+      line-height: 1.5;
+      font-family: sans-serif;
+      width: 77%;
+      margin-left: 7%;
+      @media(max-width:992px){
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
+
+/**knowledge**/
+.knowledge{
+  height: 500px;
+  margin-bottom: 72px;
+  @media(min-width:992px){
+    @media(max-width: 1199px){
+      margin-bottom: 185px !important;
+    }
+  }
+  @media(max-width:768px){
+    margin-bottom: 164px !important;
+  }
+  .left{
+    margin-top: 0;
+    width: 60%;
+    float: left;
+    padding: 0 15px;
+    @media(max-width:992px){
+      width:100% !important;
+    }
+    h2{
+      padding: 0 15px;
+      font-family: sans-serif;
+      font-size: 27px;
+    }
+    ul{
+      li{
+        background: #63b2b2;
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #fff;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 3px;
+        &:last-of-type{
+          position: relative;
+          li{
+            padding: 0;
+          }
+          svg{
+            overflow: visible;
+            position: absolute;
+            right: 24px;
+            top: 12px;
+            font-size: 30px;
+          }
+        }
+        cursor: pointer;
+        .sub{
+          display: none;
+          transition: all 3s ease-in-out;
+ 
+        }
+      }
+    }
+p{
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 81px;
+  margin-bottom: -52px;
+}
+  }
+  .right{
+    width: 40%;
+    float: left;
+    position: relative;
+    height: 100%;
+@media(max-width:992px){
+  display: none;
+}
+    &:after{
+      content: "";
+    background-image: url("../imgs/stop-coronavirus-corona-virus-symbol-vector-30110593_upscaled_image_x4-removebg-preview.png");
+    @include prefixes(background-size,cover,webkit ms moz o);
+    @include prefixes(background-position,center,webkit ms moz o);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    @media(max-width: 992px){
+      display: none;
+    }
+    }
+  }
+}
+
+
+/*gallery page*/
+.galleryNewPage{
+  margin-top: 80px;
+  background-color: #ddd;
+  width: 100%;
+  // height: 300vh;
+  position: relative;
+  padding-top: 370px;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: url(../imgs/wavetop.png);
+    width: 100%;
+    height: 300px;
+  }
+  .row{
+    width: 32.3333%;
+    float: $flaotLeft;
+    margin-left: 1%;
+    &.row1{
+      width: 100%;
+      @media(min-width:768px){
+        @media(max-width: 992px){
+          width: 100% !important;
+        }
+      }
+    }
+    @media(max-width:767px)
+    {
+      width: 100% !important;
+    }
+    @media(min-width:768px){
+      @media(max-width: 992px){
+        width: 49% !important;
+      }
+    }
+    .imge{
+      position: relative;
+      margin-bottom: 26px;
+
+    .caption{
+      background: #fff;
+      padding: 1px 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      p{
+        font-family: sans-serif;
+        font-size: 17px;
+      }
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  }
 }
 
 /*compoents*/

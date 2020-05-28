@@ -29,16 +29,17 @@ body {
   .header .menu-navbar {
     padding-right: 27px;
     border-radius: 10px;
-    border: 1px solid #ACEEF3;
-    background: #ACEEF3;
+    border: 1px solid #7AA6A6;
+    background: #63b2b2;
     text-align: center;
     margin-top: 20px;
     float: right; }
     .header .menu-navbar ul li {
-      display: inline-block; }
+      display: inline-block;
+      position: relative; }
       .header .menu-navbar ul li a {
         text-decoration: none;
-        color: #333;
+        color: #ffffffe3;
         font-family: monospace;
         font-size: 18px;
         padding: 10px; }
@@ -46,11 +47,14 @@ body {
         position: relative; }
         .header .menu-navbar ul li.active a {
           font-weight: bold;
-          font-style: italic; }
+          font-style: italic;
+          color: #fff; }
           .header .menu-navbar ul li.active a svg {
             position: absolute;
-            top: 11px;
-            left: 27px; }
+            /* top: 11px; */
+            left: 27px;
+            color: #3d6363;
+            bottom: -9px; }
       .header .menu-navbar ul li:last-of-type {
         position: relative; }
         .header .menu-navbar ul li:last-of-type a svg {
@@ -107,8 +111,8 @@ body {
             outline: 0;
             letter-spacing: 4px;
             font-size: 14px;
-            background: #ACEEF3;
-            border: 1px solid #ACEEF3;
+            background: #63b2b2;
+            border: 1px solid #63b2b2;
             padding: 9px 19px;
             border-radius: 4px;
             margin: 4px;
@@ -171,7 +175,7 @@ body {
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.5);
         transition: all .3s ease-in-out; }
       .about .left .img:hover .overlay {
         background-color: rgba(0, 0, 0, 0.2); }
@@ -234,15 +238,15 @@ body {
     line-height: 1.6; }
   .article button {
     outline: 0;
-    background: #ACEEF3;
-    border: 1px solid #ACEEF3;
+    background: #63b2b2;
+    border: 1px solid #63b2b2;
     padding: 9px 37px;
     font-size: 17px;
     font-family: monospace;
     cursor: pointer;
     transition: box-shadow .5s ease-in-out; }
     .article button:hover {
-      box-shadow: 1px 1px 4px 4px #9be9ef; }
+      box-shadow: 1px 1px 8px #32777799; }
 
 /*Seriousness of the virus*/
 .Seriousness {
@@ -358,10 +362,11 @@ body {
     .advices .left li {
       cursor: pointer;
       margin-bottom: 20px;
-      background: #51a5ac;
+      background: #63b2b2;
       border-radius: 3px;
       padding: 5px;
-      margin-right: 95px; }
+      margin-right: 95px;
+      text-align: center; }
       .advices .left li:last-of-type a {
         font-size: 13px; }
       .advices .left li a {
@@ -541,8 +546,9 @@ body {
       line-height: 2;
       letter-spacing: 2px; }
       .footer .row ul li svg {
-        color: #4ad1db;
-        margin-right: 10px; }
+        color: #63b2b2;
+        margin-right: 10px;
+        cursor: pointer; }
   .footer .rights {
     width: 100%; }
     .footer .rights span {
@@ -657,17 +663,27 @@ body {
     float: left;
     margin-top: 27px;
     padding-bottom: 55px; }
+    @media (max-width: 992px) {
+      .log .left {
+        width: 100% !important; } }
     .log .left h3 {
       color: #333;
       font-family: monospace;
       font-size: 28px;
       padding-left: 36px; }
+      @media (max-width: 992px) {
+        .log .left h3 {
+          padding-left: 0 !important; } }
     .log .left form {
       padding-left: 36px; }
+      @media (max-width: 992px) {
+        .log .left form {
+          padding-left: 0 !important; } }
     .log .left .email-suggest, .log .left .email-suggest1 {
+      margin-bottom: 20px;
       width: 45%;
       outline: 0;
-      border-radius: 9px;
+      border-radius: 4px;
       border: 1px solid #f1f1f1;
       padding: 12px 63px 12px 12px;
       color: #333;
@@ -676,6 +692,12 @@ body {
       display: block; }
       .log .left .email-suggest:first-of-type, .log .left .email-suggest1:first-of-type {
         margin-bottom: 20px; }
+    .log .left p {
+      margin-left: 36px;
+      font-family: sans-serif;
+      font-size: 15px;
+      text-align: left;
+      color: #333333eb; }
     .log .left a {
       text-decoration: none;
       color: #333;
@@ -683,7 +705,7 @@ body {
       text-align: center;
       cursor: pointer;
       padding: 12px 63px 12px 12px;
-      background: #ACEEF3; }
+      background: #63b2b2; }
     .log .left .suggest-box {
       padding: 14px;
       background: #fff;
@@ -713,6 +735,253 @@ body {
   .log .right img {
     width: 50%;
     float: left; }
+
+/****about page*/
+/*information*/
+.infomation {
+  background-image: url("https://fox2now.com/wp-content/uploads/sites/14/2020/03/CHIP-Coronavirus-COVID-19.png?w=1280&h=720&crop=1");
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-background-position: center center;
+  -ms-background-position: center center;
+  -moz-background-position: center center;
+  -o-background-position: center center;
+  background-position: center center;
+  width: 100%;
+  height: 90vh;
+  position: relative; }
+  @media (max-width: 992px) {
+    .infomation {
+      height: 478px !important;
+      margin-top: 83px; } }
+
+.infomation:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-image: url(../imgs/wave.png);
+  width: 100%;
+  height: 186px; }
+
+/** page **/
+.page ul li {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 17px; }
+  .page ul li.active {
+    cursor: pointer; }
+    .page ul li.active a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold; }
+    .page ul li.active::after {
+      content: "/"; }
+
+/**about*/
+.video {
+  width: 70%;
+  position: fixed;
+  top: 19px;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  left: 215px; }
+  @media (max-width: 768px) {
+    .video {
+      left: 0 !important;
+      width: 100% !important;
+      top: 0 !important; } }
+  .video div {
+    position: relative;
+    top: 53px;
+    left: 50%;
+    z-index: 9;
+    color: #fff;
+    cursor: pointer; }
+    .video div img {
+      width: 25px;
+      height: 25px; }
+  .video iframe {
+    height: 91vh;
+    width: 100%;
+    position: relative; }
+
+.main {
+  margin-top: 74px;
+  margin-bottom: 64px; }
+  .main .left {
+    width: 40%;
+    float: left; }
+    @media (max-width: 992px) {
+      .main .left {
+        width: 100% !important; } }
+    .main .left .img {
+      position: relative; }
+      .main .left .img .covid {
+        width: 100%;
+        height: 100%; }
+      .main .left .img .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); }
+      .main .left .img .play {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 41%;
+        top: 38%;
+        z-index: 9;
+        cursor: pointer; }
+  .main .right {
+    width: 60%;
+    float: left; }
+    @media (max-width: 992px) {
+      .main .right {
+        width: 100% !important; } }
+    .main .right p {
+      line-height: 1.5;
+      font-family: sans-serif;
+      width: 77%;
+      margin-left: 7%; }
+      @media (max-width: 992px) {
+        .main .right p {
+          width: 100% !important;
+          margin-left: 0 !important; } }
+
+/**knowledge**/
+.knowledge {
+  height: 500px;
+  margin-bottom: 72px; }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .knowledge {
+    margin-bottom: 185px !important; } }
+
+  @media (max-width: 768px) {
+    .knowledge {
+      margin-bottom: 164px !important; } }
+  .knowledge .left {
+    margin-top: 0;
+    width: 60%;
+    float: left;
+    padding: 0 15px; }
+    @media (max-width: 992px) {
+      .knowledge .left {
+        width: 100% !important; } }
+    .knowledge .left h2 {
+      padding: 0 15px;
+      font-family: sans-serif;
+      font-size: 27px; }
+    .knowledge .left ul li {
+      background: #63b2b2;
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #fff;
+      margin: 5px;
+      padding: 10px;
+      border-radius: 3px;
+      cursor: pointer; }
+      .knowledge .left ul li:last-of-type {
+        position: relative; }
+        .knowledge .left ul li:last-of-type li {
+          padding: 0; }
+        .knowledge .left ul li:last-of-type svg {
+          overflow: visible;
+          position: absolute;
+          right: 24px;
+          top: 12px;
+          font-size: 30px; }
+      .knowledge .left ul li .sub {
+        display: none;
+        transition: all 3s ease-in-out; }
+    .knowledge .left p {
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      margin-top: 81px;
+      margin-bottom: -52px; }
+  .knowledge .right {
+    width: 40%;
+    float: left;
+    position: relative;
+    height: 100%; }
+    @media (max-width: 992px) {
+      .knowledge .right {
+        display: none; } }
+    .knowledge .right:after {
+      content: "";
+      background-image: url("../imgs/stop-coronavirus-corona-virus-symbol-vector-30110593_upscaled_image_x4-removebg-preview.png");
+      -webkit-background-size: cover;
+      -ms-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      -webkit-background-position: center;
+      -ms-background-position: center;
+      -moz-background-position: center;
+      -o-background-position: center;
+      background-position: center;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      height: 100%; }
+      @media (max-width: 992px) {
+        .knowledge .right:after {
+          display: none; } }
+
+/*gallery page*/
+.galleryNewPage {
+  margin-top: 80px;
+  background-color: #ddd;
+  width: 100%;
+  position: relative;
+  padding-top: 370px; }
+  .galleryNewPage:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: url(../imgs/wavetop.png);
+    width: 100%;
+    height: 300px; }
+  .galleryNewPage .row {
+    width: 32.3333%;
+    float: left;
+    margin-left: 1%; }
+    .galleryNewPage .row.row1 {
+      width: 100%; }
+@media (min-width: 768px) and (max-width: 992px) {
+  .galleryNewPage .row.row1 {
+    width: 100% !important; } }
+
+    @media (max-width: 767px) {
+      .galleryNewPage .row {
+        width: 100% !important; } }
+@media (min-width: 768px) and (max-width: 992px) {
+  .galleryNewPage .row {
+    width: 49% !important; } }
+
+    .galleryNewPage .row .imge {
+      position: relative;
+      margin-bottom: 26px; }
+      .galleryNewPage .row .imge .caption {
+        background: #fff;
+        padding: 1px 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%; }
+        .galleryNewPage .row .imge .caption p {
+          font-family: sans-serif;
+          font-size: 17px; }
+      .galleryNewPage .row .imge img {
+        width: 100%;
+        height: 100%; }
 
 /*compoents*/
 @media (max-width: 991px) {

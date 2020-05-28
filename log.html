@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Log In</title>
+    <title>contact</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/all.css">
     <script src="fonts/all.js"></script>
@@ -18,11 +18,13 @@
         </div>
         <div class="menu-navbar">
           <ul class="list-unstyled">
-            <li class="active"><a href="index.html">Home </a></li>
-            <li><a href="#info">Information</a></li>
-            <li><a href="#abu">About</a></li>
-            <li><a href="#ad">Advices</a></li>
-            <li><a href="#">LogIn<i class="fas fa-mouse-pointer"></i></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li id="io"><a href="#info"></a></li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li class="active"><a href="#">Contact<i class="fas fa-mouse-pointer"></i></a></li>
           </ul>
         </div>
         <div class="clearboth"></div>
@@ -38,7 +40,13 @@
         <h3>LOG IN</h3>
         <form>
           <input
-            class="email-suggest"
+          class="email-suggest1"
+          type="text"
+          name="pass"
+          autocomplete="off"
+          placeholder="Enter Username. . . " />
+          <input
+            class="email-suggest1"
             type="email"
             name="email"
             autocomplete="off"
@@ -48,16 +56,17 @@
               type="password"
               name="pass"
               autocomplete="off"
-              placeholder="Type Your Password. . . " />
+              placeholder=" Your Password. . . " />
 
 
+<p>By joining, you agree to our Terms of Service and Privacy Policy</p>
             <a href="index.html" class="email-suggest1">Log IN</a>
         </form>
       </div>
       </div>
 
       <div class="right hidden-xs">
-        <img src="imgs/right.jpeg">
+        <img src="imgs/3-removebg-preview.png">
       </div>
       <div class="clearboth"></div>
   </div>
@@ -104,6 +113,11 @@
             </ul>
           </div>
             <div class="clearboth"></div>
+            <div class="rights">
+              <span>All rights&copy;reserved</span>
+              <span>Designed By Alaa omran</span>
+    
+            </div>
         </div>
     </div>
   </body>

@@ -144,9 +144,7 @@ margin-right: 8px !important;
     width: 100% !important;
 
 }
-.log .left .email-suggest, .log .left .email-suggest1{
-  width: 153% !important;
-}
+
 
 
 }
@@ -275,4 +273,9 @@ font-size: 8px !important;
 .Seriousness .right{
       height: 100% !important;
 }
+}
+@media(max-width:992px){
+  .log .left .email-suggest, .log .left .email-suggest1{
+    width: 100% !important;
+  }
 }

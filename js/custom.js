@@ -9,23 +9,6 @@ $(function(){
   })
 
 
-
-// $(".container .slider .btn .next").on("click",function(){
-//
-// if(!$(".carsoul .active").is(":last-of-type")){
-//     $(".carsoul .active").removeClass("active").next().addClass("active");
-// }
-//
-// });
-//
-// $(".container .slider .btn .prev").on("click",function(){
-//
-// if(!$(".carsoul .active").is(":first-of-type")){
-//     $(".carsoul .active").removeClass("active").prev().addClass("active");
-// }
-//
-// });
-
 var height = $(".Seriousness .left").innerHeight();
 $(".Seriousness .right").height(height);
 
@@ -71,20 +54,6 @@ $(".advices .left li.hist").on("click",function(e){
     top:'0'
   })
 })
-$(".customer .next").on("click",function(){
-  if(!$(".customer .opinion_row .active").is(":last-of-type")){
-        $(".customer .opinion_row .active").removeClass("active").next().addClass("active");
-
-  }
-})
-
-$(".customer .prev").on("click",function(){
-  if(!$(".customer .opinion_row .active").is(":first-of-type")){
-  $(".customer .opinion_row .active").removeClass("active").prev().addClass("active");
-  }
-})
-
-
 $(window).on("scroll", function () {
 
     if ($(this).scrollTop() >= 720) {
@@ -166,7 +135,7 @@ if(e.keyCode == 13 && $(".input_type").val() != "")
 
 
 
-
+/**javascript */
 
 /* Carsoul */
 var currentImge    = Array.from(document.querySelectorAll(".slider .item")),
@@ -222,3 +191,41 @@ information.onclick = function(){
   console.log(window.pageYOffset==(1104));
         window.pageYOffset=(1104)
 }
+
+/**Comments */
+let $once = Array.from(document.querySelectorAll(".customer .opinion_row .row")),
+    $next = document.getElementById("nextB"),
+    $prev = document.getElementById("prevB"),
+    current = 0;
+
+ 
+
+    /* Remove Active Class */
+let removeActive = () =>{
+  $once.forEach(item => {
+    item.classList.remove("active");
+  });
+}
+let addActv = ()=>{
+  removeActive();
+$once[current].classList.add("active");
+}
+
+let addItem = ()=>{
+current = 0;
+addActv();
+}
+let removeItem = ()=>{
+  current = $once.length-1;
+  addActv();
+  }
+$next.onclick=()=>{
+  console.log("hy");
+current == $once.length-1 ?  addItem(): current++; addActv()
+}
+$prev.onclick=()=>{
+  current == 0 ?  removeItem(): current--; addActv()
+  }
+
+
+
